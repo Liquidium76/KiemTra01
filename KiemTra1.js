@@ -1,70 +1,65 @@
-var x = 60;
-var y = typeof(x);
 var arr1 = [1,'v',3,'n',5,6];
-//var z = typeof(arr1[i]);
-function text1()
+function buoc1if()
 {
+    var x = 60;
+    var y = typeof(x);
+    document.writeln("buoc 1 if");
     if(y == "number")
     {
-        document.writeln("text1 string");
+        document.writeln(" string");
     } 
     if(y == "string")
     {
-        document.writeln("text1 number");
+        document.writeln(" number");
     }  
 }
-function text2()
+function buoc1sw()
 {
+    var x = 60;
+    var y = typeof(x);
+    document.writeln("buoc 1 switch");
     switch(y)
     {
         case "number":
-            document.writeln("text2 number");
+            document.writeln(" number");
             break;
         case "string":
-            document.writeln("text2 string");
+            document.writeln(" string");
             break;
         default:
             break;
     }
 }
-function checkArr()
-{
-    for(var i = 0;i<5;i++)
-    {
-        document.writeln("checkArr" + " " + arr1[i]);
-    }
-}
-function text3()
+function buoc2if()
 {
     var n1 = 0;
     var s1 = 0;
+    document.writeln("buoc 2 if");
     for (var i = 0; i <= 5; i ++)
     {
         var z = typeof(arr1[i]);
         if(z == "number")
         {
+            document.writeln(" string");
             s1 = s1+1;
         }
         if(z == "string")
         {
+            document.writeln(" number");
             n1 = n1+1;
         }
     }
     var kieudulieu1 =
     {
         kieunumber: n1,
-        kieustring: s1,
-        hienthi1 : function()
-        {
-            return "kieu so" + " " + this.kieunumber + " " + "kieu chuoi" + " " + this.kieustring;
-        }
+        kieustring: s1, 
     }
-    document.writeln("text3" + " " + kieudulieu1.hienthi1());
 }
-function text4()
+function buoc2sw()
 {
     var n2 = 0;
     var s2 = 0;
+    document.writeln("buoc 2 switch");
     for (var i = 0; i <= 5; i ++)
     {
         var z = typeof(arr1[i]);
@@ -72,9 +67,11 @@ function text4()
         {
             case "number":
                 n2 = n2 + 1;
+                document.writeln(" number");
                 break;
             case "string":
                 s2 = s2 + 1;
+                document.writeln(" string");
                 break;
             default:
                 break;
@@ -84,15 +81,9 @@ function text4()
     {
         kieunumber: n2,
         kieustring: s2,
-        hienthi2 : function()
-        {
-            return "kieu so" + " " + this.kieunumber + " " + "kieu chuoi" + " " + this.kieustring;
-        }
     }
-    document.writeln("text4" + " " + kieudulieu2.hienthi2());
 }
-text1();
-text2();
-//checkArr();
-text3();
-text4();
+buoc1if();
+buoc1sw();
+buoc2if();
+buoc2sw();
